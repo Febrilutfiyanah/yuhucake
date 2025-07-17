@@ -97,6 +97,17 @@
                                 {{ $product->price }}
                             </p>
                         </td>
+                        <td>
+                            <form id="sync-product-{{ $product->id }}" action="{{ route('products.sync', $product->id) }}" method="POST">
+                                  @csrf
+                                  <input type="hidden" name="is_active" value="@if($product->hub_product_id) 1 @else 0 @endif" >
+                                      @if($product->hub_product_id)
+                                         <flux:switch checked onchange="document.getElementById('sync-product-{{ $product->id }}').submit()" />
+                                      @else
+                                         <flux:switch onchange="document.getElementById('sync-product-{{ $product->id }}').submit()" />
+                                      @endif
+                           </form>
+                          </td>
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                             <p class="text-gray-900 whitespace-no-wrap">
                                 {{ $product->is_active ? 'Yes' : 'No' }}
