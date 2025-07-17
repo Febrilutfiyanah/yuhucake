@@ -61,6 +61,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], fu
     Route::resource('categories', ProductCategoryController::class);
     Route::resource('products', ProductController::class);
     Route::resource('themes', ThemeController::class);
+    Route::post('products/sync/{id}', [ProductController::class, 'sync'])->name('products.sync');
+    Route::post('category/sync/{id}', [ProductCategoryController::class, 'sync'])->name('category.sync');
 
     // Aktivasi tema berdasarkan ID
     Route::put('themes/{id}/activate', [ThemeController::class, 'activate'])->name('themes.activate');
