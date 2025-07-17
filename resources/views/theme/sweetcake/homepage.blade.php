@@ -201,7 +201,7 @@
 <div class="container-fluid py-3">
     <!-- Kategori -->
     <div class="d-flex justify-content-between align-items-center mb-3 px-3">
-        <h3>Kategori Produk</h3>
+        <h3>Product Category</h3>
         <a href="{{ URL::to('/categories') }}" class="btn btn-outline-primary btn-sm me-3">Lihat Semua</a>
     </div>
 
