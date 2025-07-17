@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('image_url', 255)->nullable(); // image_url: string(255), nullable
             $table->boolean('is_active')->default(true); // is_active: boolean, default true
             $table->timestamps(); // created_at & updated_at
+            $table->unsignedBigInteger('hub_product_id')->nullable(); 
 
             // Foreign Key Constraint
             $table->foreign('product_category_id')
@@ -30,6 +31,7 @@ return new class extends Migration
                   ->onDelete('set null')
                   ->onUpdate('cascade');
         });
+
     }
 
     /**
