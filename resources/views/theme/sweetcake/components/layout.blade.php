@@ -7,7 +7,7 @@
     <meta name="author" content="Sunny Go Team">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>@yield('title', 'Hexashop')</title>
+    <title>@yield('title', 'Yuhucake')</title>
 
     <!-- CSS Hexashop -->
     <link rel="stylesheet" type="text/css" href="{{ asset('theme/' . $themeFolder . '/assets/css/bootstrap.min.css') }}">
